@@ -1,0 +1,7 @@
+#content {
+    margin: var(--margin-m);
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}

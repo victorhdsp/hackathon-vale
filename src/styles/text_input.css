@@ -1,0 +1,16 @@
+#text_input {
+    margin: var(--margin-m);
+    display: flex;
+    background-color: var(--color-background);
+    gap: var(--margin-s);
+}
+
+#text_input input{
+    width: 100%;
+}
+
+#text_input button{
+    aspect-ratio: 1/1;
+    width: var(--touch-size);
+    height: var(--touch-size);
+}
