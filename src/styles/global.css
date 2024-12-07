@@ -1,6 +1,6 @@
 @import url("./reset.css");
 @import url("./content.css");
-@import url("./text_input.css");
+@import url("./footer.css");
 
 :root {
     --color-base: #475569;
@@ -39,6 +39,9 @@ input {
 button {
     border: solid 1px var(--color-foreground);
     border-radius: var(--radius-s);
+}
+button:disabled {
+    opacity: .5;
 }
 
 .icon {

@@ -17,3 +17,15 @@ INPUT_AREA.querySelector("input").addEventListener("input", (event) => {
     else
     INPUT_AREA.dataset.type = "voice"
 })
+
+export function render_context() {
+    let context = [];
+    if (localStorage.getItem("context"))
+        context = JSON.parse(localStorage.getItem("context"));
+    
+    CONTENT.innerHTML = "";
+    context.forEach((content, index) => {
+        if (index > 2)
+            update_content(content.parts[0].text)
+    })
+}

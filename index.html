@@ -9,26 +9,47 @@
 </head>
 <body>
     <header></header>
-    <main id="content"></main>
-    <footer id="input_area" data-type="voice">
-        <div id="input_box" >
-            <input
-                type="text"
-                id="input"
-                name="input"
-                placeholder="Você tem uma pergunta?"
-            >
+    <main id="main">
+        <div id="content"></div>
+    </main>
+    <footer id="footer" data-type="voice">
+        <form id="input_area" data-type="voice">
+            <div id="input_box" >
+                <input
+                    type="text"
+                    id="input"
+                    name="input"
+                    placeholder="Você tem uma pergunta?"
+                >
+            </div>
+            <button type="button" id="chat-to-voice">
+                <div class="icon">
+                    <img src="./src/assets/icons/microphone.svg"/>
+                </div>
+            </button>
+            <button type="submit" id="chat">
+                <div class="icon">
+                    <img src="./src/assets/icons/arrow-right.svg"/>
+                </div>
+            </button>
+        </form>
+        <div id="menu">
+            <button type="button" id="voice-to-chat">
+                <div class="icon">
+                    <img src="./src/assets/icons/pen-to-square.svg"/>
+                </div>
+            </button>
+            <button type="button" id="voice">
+                <div class="icon">
+                    <img src="./src/assets/icons/microphone.svg"/>
+                </div>
+            </button>
+            <button type="button" id="resumes" disabled>
+                <div class="icon">
+                    <img src="./src/assets/icons/book-open.svg"/>
+                </div>
+            </button>
         </div>
-        <button type="button" id="voice">
-            <div class="icon">
-                <img src="./src/assets/icons/microphone.svg"/>
-            </div>
-        </button>
-        <button type="button" id="chat">
-            <div class="icon">
-                <img src="./src/assets/icons/arrow-right.svg"/>
-            </div>
-        </button>
     </footer>
 </body>
 </html>

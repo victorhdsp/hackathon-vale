@@ -1,0 +1,13 @@
+#menu {
+    margin: var(--margin-m);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: var(--color-background);
+    gap: calc(var(--margin-s) + .5rem);
+}
+
+#menu #voice {
+    width: calc(var(--touch-size) + 1rem);
+    height: calc(var(--touch-size) + 1rem);
+}

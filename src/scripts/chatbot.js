@@ -1,5 +1,5 @@
 import { prompts } from "./prompts/index.js"
-import { CONTENT, update_content } from "./document_modifier.js";
+import { render_context } from "./document_modifier.js";
 
 function make_context(text) {
     let context = [];
@@ -12,7 +12,7 @@ function make_context(text) {
             { role:"user", parts: [{ text: prompts.question }] }
         ]
 
-    context.push({ role:"user", parts: [{ text }] })
+    context.push({ role:"user", parts: [{ text: `<p>${text}</p>` }] })
     localStorage.setItem("context", JSON.stringify(context));
     return context;
 }
@@ -41,9 +41,5 @@ export async function get_text_in_gemini(text) {
         context.push(candidate.content);
     });
     localStorage.setItem("context", JSON.stringify(context));
-    CONTENT.innerHTML = "";
-    context.forEach((content, index) => {
-        if (index > 2)
-            update_content(content.parts[0].text)
-    })
+    render_context()
 }

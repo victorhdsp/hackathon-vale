@@ -17,18 +17,7 @@
     padding: var(--margin-s) calc(var(--margin-s) + .3rem);
 }
 
-#input_area button{
-    aspect-ratio: 1/1;
-    width: calc(var(--touch-size) + .4rem);
-    height: calc(var(--touch-size) + .4rem);
-}
-#input_area #voice{
-    background-color: var(--color-base);
-}
-#input_area #chat{
-    background-color: var(--color-base);
-}
-#input_area[data-type="chat"] #voice{
+#input_area[data-type="chat"] #chat-to-voice{
     display: none;
 }
 #input_area[data-type="voice"] #chat{

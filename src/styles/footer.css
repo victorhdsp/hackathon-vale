@@ -1,0 +1,16 @@
+@import url("./text_input.css");
+@import url("./menu.css");
+
+#footer button{
+    aspect-ratio: 1/1;
+    width: calc(var(--touch-size) + .4rem);
+    height: calc(var(--touch-size) + .4rem);
+    background-color: var(--color-base);
+}
+
+#footer[data-type="voice"] #input_area {
+    display: none;
+}
+#footer[data-type="chat"] #menu {
+    display: none;
+}
