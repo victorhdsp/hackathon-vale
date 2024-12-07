@@ -1,7 +1,7 @@
 # PROJETO HACKATHON
 
-[ ] Construir interface do chat.
-[ ] Integrar botão de voz.
+[x] Construir interface do chat.
+[x] Integrar botão de voz.
 [ ] Integrar verificação de conteúdo baseado em um PDF ou Video.
     - Formato mais simples possível, ignorar alucinação e internet e avisar que nessa solução funciona dessa forma, mas que é possível fazer um pré-seleção do conteúdo que permite melhorar a qualidade das respostas bem como praticamente eliminar alucinação.
 [ ] Construção de exercícios baseados no conteúdo.

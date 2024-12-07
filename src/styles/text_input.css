@@ -7,6 +7,10 @@
 
 #input_area #input_box{
     width: 100%;
+    border: 1px solid var(--color-foreground);
+    border-radius: var(--radius-s);
+    background-color: var(--color-background);
+    margin: auto;
 }
 #input_area #input_box input{
     width: 100%;
@@ -15,14 +19,14 @@
 
 #input_area button{
     aspect-ratio: 1/1;
-    width: var(--touch-size);
-    height: var(--touch-size);
+    width: calc(var(--touch-size) + .4rem);
+    height: calc(var(--touch-size) + .4rem);
 }
 #input_area #voice{
-    background-color: red;
+    background-color: var(--color-base);
 }
 #input_area #chat{
-    background-color: blue;
+    background-color: var(--color-base);
 }
 #input_area[data-type="chat"] #voice{
     display: none;

@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assistent</title>
     <link rel="stylesheet" href="./src/styles/global.css">
-    <script src="./src/scripts/index.js" async></script>
+    <script type="module" src="./src/scripts/index.js" async></script>
 </head>
 <body>
     <header></header>
-    <div id="content">
+    <main id="content">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor, elit a mollis ultricies, sapien felis fringilla ante, nec malesuada metus dolor quis lectus.
-    </div>
-    <div id="input_area" data-type="voice">
+    </main>
+    <footer id="input_area" data-type="voice">
         <div id="input_box" >
             <input
                 type="text"
@@ -21,8 +21,16 @@
                 placeholder="Você tem uma pergunta?"
             >
         </div>
-        <button type="button" id="voice"></button>
-        <button type="button" id="chat"></button>
-    </div>
+        <button type="button" id="voice">
+            <div class="icon">
+                <img src="./src/assets/icons/microphone.svg"/>
+            </div>
+        </button>
+        <button type="button" id="chat">
+            <div class="icon">
+                <img src="./src/assets/icons/arrow-right.svg"/>
+            </div>
+        </button>
+    </footer>
 </body>
 </html>

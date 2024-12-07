@@ -3,18 +3,18 @@
 @import url("./text_input.css");
 
 :root {
-    --color-base: blue;
-    --color-background: #eeeeee;
-    --color-foreground: #c1c1c1;
-    --margin-s: 1.2rem;
+    --color-base: #475569;
+    --color-background: #f1f1f1;
+    --color-foreground: #d5d5d5;
+    --margin-s: 1rem;
     --margin-m: 2.4rem;
     --margin-l: 3.6rem;
     
     --touch-size: 4rem;
     
-    --radius-s: .5rem;
-    --radius-m: .8rem;
-    --radius-l: 1.2rem
+    --radius-s: 1.2rem;
+    --radius-m: 1.8rem;
+    --radius-l: 2.5rem
 }
 
 html {
@@ -33,9 +33,14 @@ body {
 input {
     height: var(--touch-size);
     border-radius: var(--radius-s);
+    background-color: var(--color-background);
 }
 
 button {
     border: solid 1px var(--color-foreground);
     border-radius: var(--radius-s);
+}
+
+.icon {
+    padding: .7rem;
 }
