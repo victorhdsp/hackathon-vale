@@ -2,9 +2,9 @@ import { prompts } from "./prompts/index.js"
 import { update_content } from "./document_modifier.js";
 
 function make_context(text) {
+    if (Document.cookies)
     return (
-       `${prompts.human_rights}
-        ${text}`
+       `${prompts.human_rights}\n${prompts.rules}\n${prompts.question}\n${text}`
     )
 }
 

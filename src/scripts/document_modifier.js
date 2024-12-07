@@ -4,7 +4,10 @@ export const INPUT_AREA = document.querySelector("#input_area");
 
 export function update_content(text) {
     const tmp = CONTENT.innerHTML;
-    CONTENT.innerHTML = `${tmp}<br>${text}`;
+    if (tmp == "")
+        CONTENT.innerHTML = `${text}`;
+    else
+        CONTENT.innerHTML = `${tmp}<br>${text}`;
     CONTENT.scrollTo(0, CONTENT.scrollTop + CONTENT.scrollHeight);
 }
 
