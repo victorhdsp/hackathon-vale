@@ -9,6 +9,7 @@ INPUT_AREA.addEventListener("submit", (event) => {
     const input = INPUT_AREA.querySelector("input");
     get_text_in_gemini(input.value);
     input.value = "";
+    INPUT_AREA.dataset.type = "voice"
 })
 
 const VOICE_TO_CHAT = document.querySelector("#voice-to-chat");

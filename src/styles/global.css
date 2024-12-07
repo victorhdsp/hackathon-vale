@@ -3,9 +3,11 @@
 @import url("./footer.css");
 
 :root {
-    --color-base: #475569;
+    --color-base: #007E7A;
     --color-background: #f1f1f1;
     --color-foreground: #d5d5d5;
+    --color-background-user: #0ABB9826;
+    --color-background-model: #55555526;
     --margin-s: 1rem;
     --margin-m: 2.4rem;
     --margin-l: 3.6rem;
@@ -46,4 +48,5 @@ button:disabled {
 
 .icon {
     padding: .7rem;
+    pointer-events: none;
 }

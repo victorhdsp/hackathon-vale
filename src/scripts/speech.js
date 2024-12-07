@@ -1,4 +1,4 @@
-import { update_content } from "./document_modifier.js";
+import { get_text_in_gemini } from "./chatbot.js";
 
 const VOICE = document.querySelector("#voice");
 class speechApi {
@@ -12,7 +12,7 @@ class speechApi {
         this.speechApi.onresult = e => {
             const index = e.resultIndex;
             const transcript = e.results[index][0].transcript;
-            update_content(transcript);
+            get_text_in_gemini(transcript);
         }
     }
 
@@ -26,13 +26,19 @@ class speechApi {
 }
 
 const speech = new speechApi();
-VOICE.addEventListener("click", () => {
-    speech.start();
-    VOICE.disabled = true;
-    console.log("test")
 
-    setTimeout(() => {
-        speech.stop();
-        VOICE.disabled = false;
-    }, 5000);
+VOICE.addEventListener("touchstart", () => {
+    speech.start();
+})
+
+VOICE.addEventListener("touchend", () => {
+    speech.stop();
+})
+
+VOICE.addEventListener("mousedown", () => {
+    speech.start();
+})
+
+VOICE.addEventListener("mouseup", () => {
+    speech.stop();
 })

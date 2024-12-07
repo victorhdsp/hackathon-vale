@@ -12,7 +12,7 @@ function make_context(text) {
             { role:"user", parts: [{ text: prompts.question }] }
         ]
 
-    context.push({ role:"user", parts: [{ text: `<p>${text}</p>` }] })
+    context.push({ role:"user", parts: [{ text: `<p data-role="user">${text}</p>` }] })
     localStorage.setItem("context", JSON.stringify(context));
     return context;
 }
