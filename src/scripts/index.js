@@ -30,9 +30,26 @@ async function get_text_in_gemini(text) {
 
 /* DOCUMENT MODIFIER */
 const CONTENT = document.querySelector("#content");
+const INPUT_AREA = document.querySelector("#input_area");
 
 function update_content(text) {
     const tmp = CONTENT.innerHTML;
     CONTENT.innerHTML = `${tmp}<br>${text}`;
     CONTENT.scrollTo(0, CONTENT.scrollTop + CONTENT.scrollHeight);
 }
+
+INPUT_AREA.querySelector("input").addEventListener("input", (event) => {
+    if (event.target.value != "")
+        INPUT_AREA.dataset.type = "chat"
+    else
+    INPUT_AREA.dataset.type = "voice"
+})
+
+/* CHAT EVENT */
+
+const CHAT = document.querySelector("#chat");
+
+CHAT.addEventListener("click", (_) => {
+    const input = INPUT_AREA.querySelector("input");
+    update_content(input.value);
+})

@@ -1,16 +1,32 @@
-#text_input {
+#input_area {
     margin: var(--margin-m);
     display: flex;
     background-color: var(--color-background);
     gap: var(--margin-s);
 }
 
-#text_input input{
+#input_area #input_box{
     width: 100%;
 }
+#input_area #input_box input{
+    width: 100%;
+    padding: var(--margin-s) calc(var(--margin-s) + .3rem);
+}
 
-#text_input button{
+#input_area button{
     aspect-ratio: 1/1;
     width: var(--touch-size);
     height: var(--touch-size);
+}
+#input_area #voice{
+    background-color: red;
+}
+#input_area #chat{
+    background-color: blue;
+}
+#input_area[data-type="chat"] #voice{
+    display: none;
+}
+#input_area[data-type="voice"] #chat{
+    display: none;
 }
