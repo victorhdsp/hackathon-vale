@@ -1,0 +1,35 @@
+#aside {
+    width: 100vw;
+    height: 100svh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: var(--margin-m);
+    background-color: var(--color-background);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: var(--margin-m);
+}
+
+#aside[data-status="closed"] {
+    display: none;
+}
+
+#aside header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#aside .resume-item {
+    display: flex;
+    gap: var(--margin-m);
+    align-items: center;
+    background-color: var(--color-background-user);
+    padding: var(--margin-s);
+    border-radius: var(--radius-s);
+}
+
+#aside .eye {
+    background-color: var(--color-base);
+}

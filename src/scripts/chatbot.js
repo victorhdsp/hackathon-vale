@@ -1,5 +1,6 @@
 import { prompts } from "./prompts/index.js"
 import { render_context } from "./document_modifier.js";
+import { chat_voice } from "./synthesis.js";
 
 function make_context(text) {
     let context = [];
@@ -39,6 +40,7 @@ export async function get_text_in_gemini(text) {
     
     payload.candidates.forEach(candidate => {
         context.push(candidate.content);
+        chat_voice(candidate.content.parts[0].text)
     });
     localStorage.setItem("context", JSON.stringify(context));
     render_context()

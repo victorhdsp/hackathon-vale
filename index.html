@@ -3,12 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assistent</title>
+    <title>Professora Val</title>
     <link rel="stylesheet" href="./src/styles/global.css">
     <script type="module" src="./src/scripts/index.js" async></script>
 </head>
-<body>
-    <header></header>
+<body id="home">
+    <aside id="aside" data-status="closed">
+        <header>
+            <h1>Resumos</h1>
+            <button type="button" id="close-resumes">
+                <div class="icon">
+                    <img src="./src/assets/icons/xmark.svg"/>
+                </div>
+            </button>
+        </header>
+        <div class="resume-item" data-url="/human_rights.html">
+            <button type="button" class="eye">
+                <div class="icon">
+                    <img src="./src/assets/icons/eye.svg"/>
+                </div>
+            </button>
+            <h2>Direitos Humanos</h2>
+        </div>
+    </aside>
     <main id="main">
         <div id="content"></div>
     </main>
@@ -39,12 +56,12 @@
                     <img src="./src/assets/icons/pen-to-square.svg"/>
                 </div>
             </button>
-            <button type="button" id="voice">
+            <button type="button" id="voice" data-time="0">
                 <div class="icon">
                     <img src="./src/assets/icons/microphone.svg"/>
                 </div>
             </button>
-            <button type="button" id="resumes" disabled>
+            <button type="button" id="open-resumes">
                 <div class="icon">
                     <img src="./src/assets/icons/book-open.svg"/>
                 </div>

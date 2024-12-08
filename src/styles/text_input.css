@@ -1,25 +1,25 @@
-#input_area {
+#home #input_area {
     margin: var(--margin-m);
     display: flex;
     background-color: var(--color-background);
     gap: var(--margin-s);
 }
 
-#input_area #input_box{
+#home #input_area #input_box{
     width: 100%;
     border: 1px solid var(--color-foreground);
     border-radius: var(--radius-s);
     background-color: var(--color-background);
     margin: auto;
 }
-#input_area #input_box input{
+#home #input_area #input_box input{
     width: 100%;
     padding: var(--margin-s) calc(var(--margin-s) + .3rem);
 }
 
-#input_area[data-type="chat"] #chat-to-voice{
+#home #input_area[data-type="chat"] #chat-to-voice{
     display: none;
 }
-#input_area[data-type="voice"] #chat{
+#home #input_area[data-type="voice"] #chat{
     display: none;
 }

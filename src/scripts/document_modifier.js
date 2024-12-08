@@ -1,4 +1,5 @@
 /* DOCUMENT MODIFIER */
+const MAIN = document.querySelector("#main")
 export const CONTENT = document.querySelector("#content");
 export const INPUT_AREA = document.querySelector("#input_area");
 
@@ -12,7 +13,7 @@ export function update_content(text) {
         else
             CONTENT.innerHTML = `${tmp}<br>${text}`;
     }
-    CONTENT.scrollTo(0, CONTENT.scrollTop + CONTENT.scrollHeight);
+    MAIN.scrollTo(0, CONTENT.scrollTop + CONTENT.scrollHeight);
 }
 
 INPUT_AREA.querySelector("input").addEventListener("input", (event) => {

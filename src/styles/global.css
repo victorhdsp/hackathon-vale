@@ -1,6 +1,7 @@
 @import url("./reset.css");
 @import url("./content.css");
 @import url("./footer.css");
+@import url("./aside.css");
 
 :root {
     --color-base: #007E7A;
@@ -12,7 +13,7 @@
     --margin-m: 2.4rem;
     --margin-l: 3.6rem;
     
-    --touch-size: 4rem;
+    --touch-size: 4.5rem;
     
     --radius-s: 1.2rem;
     --radius-m: 1.8rem;
@@ -27,7 +28,7 @@ body {
     width: 100svw;
     height: 100svh;
     display: grid;
-    grid-template-rows: max-content 1fr max-content;
+    grid-template-rows: 1fr max-content;
     background-color: var(--color-background);
     font-size: 1.8rem;
 }
@@ -41,6 +42,14 @@ input {
 button {
     border: solid 1px var(--color-foreground);
     border-radius: var(--radius-s);
+    aspect-ratio: 1/1;
+    width: calc(var(--touch-size));
+    height: calc(var(--touch-size));
+    transition: all 0.15s ease-in-out;
+}
+button[data-touched="true"],
+button:hover {
+    transform: scale(1.15);
 }
 button:disabled {
     opacity: .5;
@@ -49,4 +58,12 @@ button:disabled {
 .icon {
     padding: .7rem;
     pointer-events: none;
+}
+
+h1 {
+    font-size: 2.4rem;
+}
+
+h2 {
+    font-size: 2rem;
 }

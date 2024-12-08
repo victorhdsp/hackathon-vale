@@ -13,3 +13,15 @@
 ## Refs
 
 https://br.pinterest.com/pin/952229914958456563/
+
+---
+MELHORIAS DE UX
+
+- Tornar o sistema mais sinestésico.
+
+---
+
+PROMPT
+
+- Não ler "asteristico".
+- Conseguir reconhecer pequenas variações no texto.

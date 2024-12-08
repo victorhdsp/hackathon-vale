@@ -1,4 +1,4 @@
-#menu {
+#home #menu {
     margin: var(--margin-m);
     display: flex;
     justify-content: center;
@@ -7,7 +7,32 @@
     gap: calc(var(--margin-s) + .5rem);
 }
 
-#menu #voice {
+#home #menu #voice {
     width: calc(var(--touch-size) + 1rem);
     height: calc(var(--touch-size) + 1rem);
+    position: relative;
+}
+
+#home #menu #voice[data-time]::after {
+    content: attr(data-time);
+    position: absolute;
+    bottom: calc(100% + 2rem);
+    left: 50%;
+    transform: translate(-50%, 0%);
+    background-color: var(--color-background-model);
+    aspect-ratio: 1/1;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    transition: all ease-in-out .2s;
+}
+
+#home #menu #voice[data-time="0"]::after {
+    pointer-events: none;
+    opacity: 0;
+    transform: translate(-50%, 100%);
+    transition: all ease-in-out .04s;
 }

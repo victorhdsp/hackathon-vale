@@ -26,19 +26,32 @@ class speechApi {
 }
 
 const speech = new speechApi();
+let sec;
 
 VOICE.addEventListener("touchstart", () => {
+    let time = 0;
     speech.start();
+    VOICE.dataset.touched = "true";
+    VOICE.dataset.time = time;
+    sec = setInterval(() => {
+        time++;
+        VOICE.dataset.time = time;
+    }, 1000)
 })
 
 VOICE.addEventListener("touchend", () => {
     speech.stop();
+    clearInterval(sec);
+    VOICE.dataset.time = 0;
+    VOICE.dataset.touched = "false";
 })
 
 VOICE.addEventListener("mousedown", () => {
     speech.start();
+    VOICE.dataset.touched = "true";
 })
 
 VOICE.addEventListener("mouseup", () => {
     speech.stop();
+    VOICE.dataset.touched = "false";
 })

@@ -1,20 +1,20 @@
-#main {
+#home #main {
     margin: var(--margin-m);
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
     scroll-behavior: smooth;
 }
-#content {
-    margin-right: var(--margin-m);
+#home #content {
+    margin-right: var(--margin-s);
 }
 
-#content * {
+#home #content * {
     background-color: var(--color-background-model);
     padding: calc(var(--margin-s) + .4rem);
     border-radius: var(--radius-s);
 }
-#content *[data-role="user"] {
+#home #content *[data-role="user"] {
     text-align: end;
     background-color: var(--color-background-user);
 }
