@@ -3,7 +3,7 @@ const MAIN = document.querySelector("#main")
 export const CONTENT = document.querySelector("#content");
 export const INPUT_AREA = document.querySelector("#input_area");
 
-function Models(content) {
+export function Models(content) {
     //{ role:"user", parts: [{ text: prompts.human_rights }] },
     if (content.role == "user")
         return (
