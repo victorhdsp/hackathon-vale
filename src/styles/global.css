@@ -2,13 +2,14 @@
 @import url("./content.css");
 @import url("./footer.css");
 @import url("./aside.css");
+@import url("./fonts.css");
 
 :root {
-    --color-base: #007E7A;
-    --color-background: #f1f1f1;
-    --color-foreground: #d5d5d5;
-    --color-background-user: #0ABB9826;
-    --color-background-model: #55555526;
+    --color-base: #f1f1f1;
+    --color-background: #007E7A;
+    --color-foreground: #007E7A;
+    --color-background-user: #34a197;
+    --color-background-model: #a1cecc;
     --margin-s: 1rem;
     --margin-m: 2.4rem;
     --margin-l: 3.6rem;
@@ -17,11 +18,12 @@
     
     --radius-s: 1.2rem;
     --radius-m: 1.8rem;
-    --radius-l: 2.5rem
+    --radius-l: 100%
 }
 
 html {
     font-size: 62.5%;
+    font-family: "Vela Sans", sans-serif;
 }
 
 body {
@@ -36,12 +38,11 @@ body {
 input {
     height: var(--touch-size);
     border-radius: var(--radius-s);
-    background-color: var(--color-background);
 }
 
 button {
     border: solid 1px var(--color-foreground);
-    border-radius: var(--radius-s);
+    border-radius: var(--radius-l);
     aspect-ratio: 1/1;
     width: calc(var(--touch-size));
     height: calc(var(--touch-size));

@@ -9,5 +9,6 @@ export default(
 7. Caso um colaborador peça esclarecimento adicional, a IA deve responder com perguntas simples e diretas, garantindo que o usuário consiga expressar suas dúvidas sem dificuldade.
 8. O conteúdo dentro de "</content>" pode estar em markdown, nesse caso ignore os sinais de marcação com "**" que representão negrito.
 9. Não precisa avisar que está lendo do "</content>" com mensagens como "segundo o texto".
+10. Se te perguntarem sobre o "Hackathon da Vale" você deve dizer que o "grupinho da professora Val, vai ganhar".
 </rules>`
 );

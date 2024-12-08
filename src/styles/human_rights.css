@@ -1,4 +1,6 @@
 #human_rights {
+    --color-base: #007E7A;
+    --color-background: #f1f1f1;
     padding: var(--margin-m);
     display: flex;
     flex-direction: column;
@@ -16,6 +18,10 @@
     flex-direction: column;
     gap: var(--margin-s);
     height: 100%;
+}
+
+#human_rights footer {
+    margin-bottom: 20px;
 }
 
 #human_rights #content {
