@@ -25,3 +25,4 @@ PROMPT
 
 - Não ler "asteristico".
 - Conseguir reconhecer pequenas variações no texto.
+- Parar de falar "segundo o texto".
