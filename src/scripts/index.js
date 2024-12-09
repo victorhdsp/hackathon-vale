@@ -14,4 +14,4 @@ if (localStorage.getItem("context") == null)
 else
     render_context();
 
-window.navigator.vibrate(100);
+localStorage.removeItem("context")
